@@ -8,12 +8,12 @@ IncludeTemplateLangFile(__FILE__);
     <?$APPLICATION->ShowHead();?>
     <title><?$APPLICATION->ShowTitle()?></title>
 
-    <link rel="stylesheet" href="/bitrix/templates/.default/template_styles.css">
+    <?$APPLICATION->SetAdditionalCSS("/bitrix/templates/.default/template_styles.css", true);?>
 
-    <script type="text/javascript" src="/bitrix/templates/.default/js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="/bitrix/templates/.default/js/functions.js"></script>
+    <?$APPLICATION->AddHeadScript("/bitrix/templates/.default/js/jquery-1.8.2.min.js");?>
+    <?$APPLICATION->AddHeadScript("/bitrix/templates/.default/js/functions.js");?>
 
-    <link rel="stylesheet" type="image/x-icon" href="/bitrix/templates/.default/favicon.ico">
+    <link rel="stylesheet" type="image/x-icon" href="/favicon.ico">
 
     <!--[if gte IE 9]><style type="text/css">.gradient {filter: none;}</style><![endif]-->
 </head>
